@@ -1,3 +1,5 @@
+import classes from "./BookList.module.css";
+
 export default function BookList() {
   let pageTitle = "Book List";
   let book1 = "https://m.media-amazon.com/images/I/61WvKcckCnL._SL1200_.jpg";
@@ -6,10 +8,18 @@ export default function BookList() {
 
   return (
     <div>
-      <h3>{pageTitle}</h3>
-      <img src={book1} alt="The Power Broker" />
-      <img src={book2} alt="Professional JavaScript for Web Developers" />
-      <img src={book3} alt="JavaScript: Absolute Beginner's Guide" />
+      <h3 className={classes.bookHeading}>{pageTitle}</h3>
+      <img className={classes.bookImage} src={book1} alt="The Power Broker" />
+      <img
+        className={classes.bookImage}
+        src={book2}
+        alt="Professional JavaScript for Web Developers"
+      />
+      <img
+        className={classes.bookImage}
+        src={book3}
+        alt="JavaScript: Absolute Beginner's Guide"
+      />
     </div>
   );
 }
